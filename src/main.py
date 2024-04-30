@@ -1,5 +1,19 @@
+from markdown_blocks import markdown_to_blocks
+
+
 def main():
-    text = "This is **text** with an *italic* word and a `code block` and an ![image](https://storage.googleapis.com/qvault-webapp-dynamic-assets/course_assets/zjjcJKZ.png) and a [link](https://boot.dev)"
+    blocks = markdown_to_blocks(
+        """
+            This is **bolded** paragraph
+
+            This is another paragraph with *italic* text and `code` here
+            This is the same paragraph on a new line
+
+            * This is a list
+            * with items
+        """
+    )
+    print(blocks)
 
 
 main()
